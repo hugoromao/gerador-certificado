@@ -57,7 +57,7 @@ def gen_cert_img(details_path,
         draw.text(
             (
                 (image_width - text_width) / 2,
-                486
+                600
             ),
             name,
             font=font_name,
@@ -72,7 +72,7 @@ def gen_cert_img(details_path,
         draw.text(
             (
                 (image_width - text_width) / 2,
-                720
+                825
             ),
             course_name,
             font=font_course,
@@ -87,8 +87,8 @@ def gen_cert_img(details_path,
 
         draw.text(
             (
-                1180,
-                858
+                1200,
+                958
             ),
             number_hours,
             font=font_numb_hour,
@@ -99,12 +99,12 @@ def gen_cert_img(details_path,
         draw the date on the certificate
         """
         text_width = draw.textlength(date_cert, font_date)
-        # x,y
+        # # x,y
 
         draw.text(
             (
-                920,
-                1000
+                1400,
+                1125
             ),
             date_cert,
             font=font_date,
@@ -138,10 +138,11 @@ if __name__ == "__main__":
     font_style = "Playwrite_SK/PlaywriteSK-VariableFont_wght.ttf"
 
     # template of the certificate
-    template_path = 'modelo_certificado_data.png'
+    template_path = 'modelo_certificado.png'
 
     # Excel file containing names of the participants
     details_path = 'list_alunos.xlsx'
+    # details_path = 'debug.xlsx'
 
     # Output Paths
     output_path = 'certificate_results_png/'
